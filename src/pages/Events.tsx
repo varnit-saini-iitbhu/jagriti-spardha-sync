@@ -29,14 +29,26 @@ const eventsData = [
   },
   {
     title: "Socio-Entrepreneurship",
-    description: "This event challenges participants to ideate, plan, and pitch innovative social entrepreneurship ventures aimed at addressing critical societal issues while ensuring financial sustainability.",
+    description: "It provides a platform for aspiring innovators and changemakers to design entrepreneurial solutions for real-world social challenges—combining creativity, strategy, and impact.",
     icon: "🚀",
     registerLink: "#"
   },
   {
-    title: "Case Study Competition",
-    description: "A comprehensive case study competition designed to test analytical thinking, problem-solving abilities, and presentation skills on real-world business and social scenarios.",
+    title: "Serve-Smart Hackathon",
+    description: "The Serve-Smart Hackathon is the flagship AI & ML challenge dedicated to harnessing the power of technology for social good. This competition calls upon innovators to leverage Artificial Intelligence and Machine Learning to design intelligent, practical, and impactful solutions aimed at solving real-world social issues.",
+    icon: "💻",
+    registerLink: "#"
+  },
+  {
+    title: "Impact-Metrics",
+    description: "This dynamic event invites data enthusiasts and problem solvers to dive into the world of analytics and derive actionable insights to address pressing social issues.",
     icon: "📊",
+    registerLink: "#"
+  },
+  {
+    title: "Re-Form",
+    description: "Re-Form is not just a fashion event — it's a movement toward sustainability and creativity. Participants are challenged to transform waste materials into wearable art that reflects innovation, environmental awareness, and social responsibility.",
+    icon: "♻️",
     registerLink: "#"
   }
 ];
