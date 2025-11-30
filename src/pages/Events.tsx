@@ -1,5 +1,6 @@
 import { EventCard } from "@/components/EventCard";
 import { Button } from "@/components/ui/button";
+import Footer from "@/components/Footer";
 
 const eventsData = [
   {
@@ -42,10 +43,28 @@ const eventsData = [
 
 const Events = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-dark-bg via-background to-dark-bg">
+    <div className="min-h-screen bg-gradient-to-b from-dark-bg via-background to-dark-bg relative overflow-hidden">
+      {/* Animated Background Effects */}
+      <div className="fixed inset-0 pointer-events-none">
+        {/* Animated grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(14,165,233,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(14,165,233,0.03)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_80%)]"></div>
+        
+        {/* Floating orbs */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-[120px] animate-float"></div>
+        <div className="absolute bottom-40 right-10 w-96 h-96 bg-neon-cyan/15 rounded-full blur-[120px] animate-float" style={{ animationDelay: "1s" }}></div>
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-primary/10 rounded-full blur-[100px] animate-float" style={{ animationDelay: "2s" }}></div>
+        
+        {/* Radial gradient overlays */}
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(14,165,233,0.15)_0%,transparent_70%)] animate-pulse" style={{ animationDuration: "4s" }}></div>
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(0,255,255,0.1)_0%,transparent_70%)] animate-pulse" style={{ animationDuration: "5s", animationDelay: "1s" }}></div>
+      </div>
+
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/30 via-background/80 to-background"></div>
+        
+        {/* Animated scan line effect */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent h-32 animate-[slide-down_3s_ease-in-out_infinite]"></div>
         
         <div className="relative container mx-auto px-4 pt-20 pb-32 text-center">
           <div className="mb-8 inline-block">
@@ -76,7 +95,7 @@ const Events = () => {
       </div>
 
       {/* Events Grid */}
-      <div className="container mx-auto px-4 pb-20">
+      <div className="relative container mx-auto px-4 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {eventsData.map((event, index) => (
             <div
@@ -92,6 +111,8 @@ const Events = () => {
           ))}
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
