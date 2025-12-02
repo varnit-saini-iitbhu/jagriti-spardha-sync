@@ -1,14 +1,7 @@
 import { useState } from "react";
 import "./EventCard.css";
 
-interface EventCardProps {
-  title: string;
-  description: string;
-  icon: string;
-  registerLink?: string;
-}
-
-export const EventCard = ({ title, description, icon, registerLink }: EventCardProps) => {
+export const EventCard = ({ title, description, icon, registerLink }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
